@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const vehiclesRoutes = require("./routes/vehicles");
 
 // Database
 const db = require("./config/sequelize.js");
@@ -9,7 +10,8 @@ db.authenticate()
   .then(() => console.log("Database connected..."))
   .catch((err) => console.log("Error:" + err));
 
-app.get("/", (req, res) => res.send("vehicle_api_test"));
+// Route which handle requests
+app.use("/vehicles", vehiclesRoutes);
 
 const PORT = process.env.PORT || 3000;
 
