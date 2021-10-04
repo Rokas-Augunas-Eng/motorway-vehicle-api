@@ -37,7 +37,7 @@ npm run dev
 
 ## Results 
 
-I am running JSON Viewer Pro (chrome extention)
+I am running JSON Viewer Pro (chrome extension)
 
 Typing http://localhost:3000/vehicles will give the following result
 
